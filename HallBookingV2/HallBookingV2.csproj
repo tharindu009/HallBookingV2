@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1C4CFF7-03B4-4C8B-A866-94D9D3C6E8BF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HallBookingV2</RootNamespace>
+    <AssemblyName>HallBookingV2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="add_venue.aspx" />
+    <Content Include="add_venue1.aspx" />
+    <Content Include="assets\css\sticky.css" />
+    <Content Include="assets\css\stickyMain.css" />
+    <Content Include="change_password.aspx" />
+    <Content Include="edit_venue.aspx" />
+    <Content Include="favicon\android-chrome-192x192.png" />
+    <Content Include="favicon\android-chrome-512x512.png" />
+    <Content Include="favicon\apple-touch-icon.png" />
+    <Content Include="favicon\browserconfig.xml" />
+    <Content Include="favicon\favicon-16x16.png" />
+    <Content Include="favicon\favicon-32x32.png" />
+    <Content Include="favicon\favicon.ico" />
+    <Content Include="favicon\mstile-150x150.png" />
+    <Content Include="favicon\safari-pinned-tab.svg" />
+    <Content Include="forgetpassword.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="image\banner_image.jpg" />
+    <Content Include="image\banner_image2.jpg" />
+    <Content Include="image\Banquet.png" />
+    <Content Include="image\Classroom_32px.png" />
+    <Content Include="image\Conference_32px.png" />
+    <Content Include="image\Organization_32px.png" />
+    <Content Include="image\seminar.png" />
+    <Content Include="image\theater.png" />
+    <Content Include="listing_grid.aspx" />
+    <Content Include="my_profile.aspx" />
+    <Content Include="my_venue.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="assets\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="assets\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="assets\bootstrap\js\bootstrap.js.map" />
+    <Content Include="assets\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="assets\pcss\style.pcss" />
+    <Content Include="assets\pcss\_classes.pcss" />
+    <Content Include="assets\pcss\_elements.pcss" />
+    <Content Include="assets\pcss\_forms.pcss" />
+    <Content Include="assets\pcss\_responsive.pcss" />
+    <Content Include="assets\pcss\_universal-classes.pcss" />
+    <Content Include="assets\pcss\_variables.pcss" />
+    <Content Include="favicon\site.webmanifest" />
+    <None Include="Properties\PublishProfiles\LocalPublish.pubxml" />
+    <None Include="Properties\PublishProfiles\LocalV2.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="assets\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="assets\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="assets\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\css\owl.carousel.min.css" />
+    <Content Include="assets\css\selectize.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\user.css" />
+    <Content Include="assets\fonts\font-awesome.css" />
+    <Content Include="assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\icons\car.png" />
+    <Content Include="assets\icons\category-books-b.png" />
+    <Content Include="assets\icons\category-cameras-b.png" />
+    <Content Include="assets\icons\category-cars-b.png" />
+    <Content Include="assets\icons\category-clothing-b.png" />
+    <Content Include="assets\icons\category-electro-b.png" />
+    <Content Include="assets\icons\category-furniture-b.png" />
+    <Content Include="assets\icons\category-jobs-b.png" />
+    <Content Include="assets\icons\category-mobile-b.png" />
+    <Content Include="assets\icons\category-music-b.png" />
+    <Content Include="assets\icons\category-pets-b.png" />
+    <Content Include="assets\icons\category-real-estate-b.png" />
+    <Content Include="assets\icons\category-sport-b.png" />
+    <Content Include="assets\icons\computer.png" />
+    <Content Include="assets\icons\feature-like.png" />
+    <Content Include="assets\icons\feature-upload.png" />
+    <Content Include="assets\icons\feature-user.png" />
+    <Content Include="assets\icons\feature-wallet.png" />
+    <Content Include="assets\icons\furniture.png" />
+    <Content Include="assets\icons\jobs.png" />
+    <Content Include="assets\icons\real-estate.png" />
+    <Content Include="assets\img\author-01.jpg" />
+    <Content Include="assets\img\author-02.jpg" />
+    <Content Include="assets\img\author-03.jpg" />
+    <Content Include="assets\img\author-04.jpg" />
+    <Content Include="assets\img\author-05.jpg" />
+    <Content Include="assets\img\author-06.jpg" />
+    <Content Include="assets\img\author-07.jpg" />
+    <Content Include="assets\img\author-08.jpg" />
+    <Content Include="assets\img\author-09.jpg" />
+    <Content Include="assets\img\blog-image-01.jpg" />
+    <Content Include="assets\img\blog-image-02.jpg" />
+    <Content Include="assets\img\blog-image-03.jpg" />
+    <Content Include="assets\img\blog-image-04.jpg" />
+    <Content Include="assets\img\blog-image-05.jpg" />
+    <Content Include="assets\img\blog-image-06.jpg" />
+    <Content Include="assets\img\close-btn.png" />
+    <Content Include="assets\img\cluster.png" />
+    <Content Include="assets\img\footer-background-icons.jpg" />
+    <Content Include="assets\img\footer-overlay.png" />
+    <Content Include="assets\img\gradient-background.png" />
+    <Content Include="assets\img\hero-background-icons.jpg" />
+    <Content Include="assets\img\hero-background-icons.png" />
+    <Content Include="assets\img\hero-background-image-01.jpg" />
+    <Content Include="assets\img\hero-background-image-02.jpg" />
+    <Content Include="assets\img\hero-background-image-03.jpg" />
+    <Content Include="assets\img\hero-overlay.png" />
+    <Content Include="assets\img\image-01.jpg" />
+    <Content Include="assets\img\image-02.jpg" />
+    <Content Include="assets\img\image-03.jpg" />
+    <Content Include="assets\img\image-04.jpg" />
+    <Content Include="assets\img\image-05.jpg" />
+    <Content Include="assets\img\image-06.jpg" />
+    <Content Include="assets\img\image-07.jpg" />
+    <Content Include="assets\img\image-08.jpg" />
+    <Content Include="assets\img\image-09.jpg" />
+    <Content Include="assets\img\image-10.jpg" />
+    <Content Include="assets\img\image-11.jpg" />
+    <Content Include="assets\img\image-12.jpg" />
+    <Content Include="assets\img\image-13.jpg" />
+    <Content Include="assets\img\image-14.jpg" />
+    <Content Include="assets\img\image-15.jpg" />
+    <Content Include="assets\img\image-16.jpg" />
+    <Content Include="assets\img\image-17.jpg" />
+    <Content Include="assets\img\image-18.jpg" />
+    <Content Include="assets\img\image-19.jpg" />
+    <Content Include="assets\img\image-20.jpg" />
+    <Content Include="assets\img\image-21.jpg" />
+    <Content Include="assets\img\image-22.jpg" />
+    <Content Include="assets\img\image-23.jpg" />
+    <Content Include="assets\img\image-24.jpg" />
+    <Content Include="assets\img\image-25.jpg" />
+    <Content Include="assets\img\image-26.jpg" />
+    <Content Include="assets\img\infobox-arrow.png" />
+    <Content Include="assets\img\logo-inverted.png" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\map-marker-w.png" />
+    <Content Include="assets\img\map-marker.png" />
+    <Content Include="assets\img\partner-1.png" />
+    <Content Include="assets\img\partner-2.png" />
+    <Content Include="assets\img\partner-3.png" />
+    <Content Include="assets\img\partner-4.png" />
+    <Content Include="assets\img\partner-5.png" />
+    <Content Include="assets\img\partner-6.png" />
+    <Content Include="assets\img\triangle-up.png" />
+    <Content Include="assets\img\user-default.png" />
+    <Content Include="assets\js\custom.js" />
+    <Content Include="assets\js\icheck.min.js" />
+    <Content Include="assets\js\infobox.js" />
+    <Content Include="assets\js\jquery-3.2.1.min.js" />
+    <Content Include="assets\js\jquery-3.3.1.min.js" />
+    <Content Include="assets\js\jquery-validate.bootstrap-tooltip.min.js" />
+    <Content Include="assets\js\jQuery.MultiFile.min.js" />
+    <Content Include="assets\js\jquery.nouislider.all.min.js" />
+    <Content Include="assets\js\jquery.validate.min.js" />
+    <Content Include="assets\js\map.js" />
+    <Content Include="assets\js\markerclusterer_packed.js" />
+    <Content Include="assets\js\masonry.pkgd.min.js" />
+    <Content Include="assets\js\owl.carousel.min.js" />
+    <Content Include="assets\js\popper.min.js" />
+    <Content Include="assets\js\readmore.min.js" />
+    <Content Include="assets\js\richmarker-compiled.js" />
+    <Content Include="assets\js\selectize.min.js" />
+    <Content Include="contact.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="image\meeting.jpg" />
+    <Content Include="image\party.jpg" />
+    <Content Include="image\spa.jpg" />
+    <Content Include="image\wedding.jpg" />
+    <Content Include="register.aspx" />
+    <Content Include="reset_password.aspx" />
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="signin.aspx" />
+    <Content Include="SingleVenue.aspx" />
+    <Content Include="single_listing.aspx" />
+    <Content Include="venue_reg.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add_venue.aspx.cs">
+      <DependentUpon>add_venue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_venue.aspx.designer.cs">
+      <DependentUpon>add_venue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add_venue1.aspx.cs">
+      <DependentUpon>add_venue1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_venue1.aspx.designer.cs">
+      <DependentUpon>add_venue1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="change_password.aspx.cs">
+      <DependentUpon>change_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="change_password.aspx.designer.cs">
+      <DependentUpon>change_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="data\DataAccessManager.cs" />
+    <Compile Include="data\search_data.cs" />
+    <Compile Include="data\user_data.cs" />
+    <Compile Include="data\venue_detail.cs" />
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="edit_venue.aspx.cs">
+      <DependentUpon>edit_venue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="edit_venue.aspx.designer.cs">
+      <DependentUpon>edit_venue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgetpassword.aspx.cs">
+      <DependentUpon>forgetpassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgetpassword.aspx.designer.cs">
+      <DependentUpon>forgetpassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="listing_grid.aspx.cs">
+      <DependentUpon>listing_grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="listing_grid.aspx.designer.cs">
+      <DependentUpon>listing_grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="my_profile.aspx.cs">
+      <DependentUpon>my_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="my_profile.aspx.designer.cs">
+      <DependentUpon>my_profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="my_venue.aspx.cs">
+      <DependentUpon>my_venue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="my_venue.aspx.designer.cs">
+      <DependentUpon>my_venue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="reset_password.aspx.cs">
+      <DependentUpon>reset_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="reset_password.aspx.designer.cs">
+      <DependentUpon>reset_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signin.aspx.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signin.aspx.designer.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SingleVenue.aspx.cs">
+      <DependentUpon>SingleVenue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SingleVenue.aspx.designer.cs">
+      <DependentUpon>SingleVenue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="single_listing.aspx.cs">
+      <DependentUpon>single_listing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="single_listing.aspx.designer.cs">
+      <DependentUpon>single_listing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="venue_reg.aspx.cs">
+      <DependentUpon>venue_reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="venue_reg.aspx.designer.cs">
+      <DependentUpon>venue_reg.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61955</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61955/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

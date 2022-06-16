@@ -1,0 +1,102 @@
+/* Here comes your own styling */
+   .myCalendar {  
+	background-color: #f2f2f2;  
+	width: 156px;  
+	border:10px solid #4CCAEF !important;
+	border-top:0px !important;}  
+	.myCalendar a {  
+	text-decoration: none;  }  
+.myCalendar .myCalendarTitle {  
+	font-weight: bold;  
+	height:40px;line-height:40px;
+	background-color:#4CCAEF;
+	color:#ffffff;
+}  
+.myCalendar th.myCalendarDayHeader  
+{
+	height:25px;
+	border-bottom: outset 2px #fbfbfb; 
+	border-right: outset 2px #fbfbfb; 
+}
+.myCalendar td.myCalendarDay {  
+	border: outset 2px #fbfbfb;
+}  
+  .myCalendar td.myCalendarDay:nth-child(7) a{color:#c52e2e !important;}
+.myCalendar .myCalendarNextPrev {  
+	text-align: center;  
+}  
+
+.myCalendar .myCalendarNextPrev a  {font-size:1px;}
+.myCalendar .myCalendarNextPrev:nth-child(1) a{color:#4CCAEF!important;background:url("prevMonth.png") no-repeat center center;}
+.myCalendar .myCalendarNextPrev:nth-child(1) a:hover,.myCalendar .myCalendarNextPrev:nth-child(3) a:hover{background-color:transparent;}
+.myCalendar .myCalendarNextPrev:nth-child(3) a{color:#4CCAEF!important;background:url("nextMonth.png") no-repeat center center;}
+.myCalendar td.myCalendarSelector a {  
+	background-color: #25bae5;  
+}  
+
+.myCalendar .myCalendarDayHeader a,
+.myCalendar .myCalendarDay a,   
+.myCalendar .myCalendarSelector a,  
+.myCalendar .myCalendarNextPrev a {  
+	display: block;  
+	line-height: 20px;  
+}  
+.myCalendar .myCalendarToday{  background-color: #f2f2f2; -webkit-box-shadow: 0 0 7px 3px #e5e5e5;
+box-shadow: 0 0 7px 3px #e5e5e5;}
+.myCalendar .myCalendarToday a{color:#25bae5 !important;}
+.myCalendar .myCalendarDay a:hover,   
+.myCalendar .myCalendarSelector a:hover {  
+	background-color: #25bae5;  
+}
+
+
+#social_footer {
+	text-align: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	padding-top: 30px;
+	margin-top: 30px;
+}
+
+#social_footer p {
+	font-size: 12px;
+	color: #8c8c8c;
+}
+
+#social_footer ul {
+	margin: 0;
+	padding: 0 0 10px 0;
+	text-align: center;
+}
+
+#social_footer ul li {
+	display: inline-block;
+	margin: 0 5px 10px 5px;
+}
+
+#social_footer ul li a {
+	color: #000;
+	text-align: center;
+	line-height: 35px;
+	display: block;
+	font-size: 16px;
+	width: 35px;
+	height: 35px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+#social_footer ul li a:hover {
+	background: #fff;
+	color: #c52e2e;
+}
+
+
+/*DIV Hide*/
+.hide {
+  display: none;
+}
+
+
+
+
